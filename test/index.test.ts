@@ -1,7 +1,6 @@
-import createFramedUpscale from "../src";
+import createFramedUpscale from '../src';
 
-
-test('asdf', function () {
+test('Same size scale, x: 0 y: 0', function() {
   const setMock = jest.fn();
   const getMock = jest.fn();
 
@@ -12,11 +11,11 @@ test('asdf', function () {
 
   const from = {
     width: 200,
-    height: 200
+    height: 200,
   };
   const to = {
     width: 200,
-    height: 200
+    height: 200,
   };
   const scale = createFramedUpscale(from, to);
   const setPixel = scale(pixels);
@@ -25,7 +24,7 @@ test('asdf', function () {
   expect(setMock.mock.calls[0]).toEqual([0, 0, 1]);
 });
 
-test('asdf', function () {
+test('Same size scale, x: 100 y: 100', function() {
   const setMock = jest.fn();
   const getMock = jest.fn();
 
@@ -36,11 +35,11 @@ test('asdf', function () {
 
   const from = {
     width: 200,
-    height: 200
+    height: 200,
   };
   const to = {
     width: 200,
-    height: 200
+    height: 200,
   };
   const scale = createFramedUpscale(from, to);
   const setPixel = scale(pixels);
@@ -49,7 +48,7 @@ test('asdf', function () {
   expect(setMock.mock.calls[0]).toEqual([100, 100, 1]);
 });
 
-test('asdf', function () {
+test('Upscale, x: 0 y: 0', function() {
   const setMock = jest.fn();
   const getMock = jest.fn();
 
@@ -60,11 +59,11 @@ test('asdf', function () {
 
   const from = {
     width: 100,
-    height: 100
+    height: 100,
   };
   const to = {
     width: 200,
-    height: 200
+    height: 200,
   };
   const scale = createFramedUpscale(from, to);
   const setPixel = scale(pixels);
@@ -76,7 +75,7 @@ test('asdf', function () {
   expect(setMock.mock.calls[3]).toEqual([1, 1, 1]);
 });
 
-test('asdf', function () {
+test('Upscale, x: 10 y: 10', function() {
   const setMock = jest.fn();
   const getMock = jest.fn();
 
@@ -87,11 +86,11 @@ test('asdf', function () {
 
   const from = {
     width: 100,
-    height: 100
+    height: 100,
   };
   const to = {
     width: 200,
-    height: 200
+    height: 200,
   };
   const scale = createFramedUpscale(from, to);
   const setPixel = scale(pixels);
